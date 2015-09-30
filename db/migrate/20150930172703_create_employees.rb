@@ -1,4 +1,4 @@
-class CreateEmployees < ActiveRecord::Migrationf
+class CreateEmployees < ActiveRecord::Migration
   def change
     create_table :employees do |t|
       t.timestamps null: false
