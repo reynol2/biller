@@ -3169,3 +3169,75 @@ Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.9ms)
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36mAccount Exists (1.8ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Bob\'s Emporium' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` ASC LIMIT 1[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer')
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM `accounts` WHERE `accounts`.`type` IN ('Customer') AND `accounts`.`id` = 10[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `accounts` WHERE `accounts`.`type` IN ('Customer') AND `accounts`.`id` = 9
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `accounts` WHERE `accounts`.`type` IN ('Customer') AND `accounts`.`id` = 8[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `accounts` WHERE `accounts`.`type` IN ('Customer') AND `accounts`.`id` = 7
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAccount Exists (0.4ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta Garbo' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta Garbo Jr' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `accounts` (`created_at`, `name`, `type`, `updated_at`) VALUES ('2015-10-04 19:30:27', 'Gretta Garbo Jr', 'Customer', '2015-10-04 19:30:27')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta Garbo' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `accounts` WHERE `accounts`.`type` IN ('Customer') AND `accounts`.`id` = 11
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta Garbo' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAccount Exists (0.3ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta GarboGretta GarboGretta GarboGretta GarboGretta Garbo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `accounts` (`created_at`, `name`, `type`, `updated_at`) VALUES ('2015-10-04 19:33:50', 'Gretta GarboGretta GarboGretta GarboGretta GarboGretta Garbo', 'Customer', '2015-10-04 19:33:50')[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta Garbo' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta GarboGretta Garbo' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `accounts` WHERE `accounts`.`type` IN ('Customer') AND `accounts`.`id` = 12
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` DESC LIMIT 1
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer')[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mAccount Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta Garbo' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Gretta Garbo' LIMIT 1[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` IS NULL LIMIT 1
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1[0m
+  [1m[35mAccount Exists (0.3ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1[0m
+  [1m[35mAccount Exists (0.2ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1[0m
+  [1m[36mCustomer Load (7.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` ASC LIMIT 1[0m
+  [1m[35mAccount Exists (2.8ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Dustin' LIMIT 1
+  [1m[36mAccount Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'DustinDustinDustinDustinDustinDustinDustin' LIMIT 1[0m
