@@ -3238,6 +3238,5 @@ Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.9ms)
   [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1[0m
   [1m[35mAccount Exists (0.2ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1
   [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dumb' LIMIT 1[0m
-  [1m[36mCustomer Load (7.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`type` IN ('Customer') ORDER BY `accounts`.`id` ASC LIMIT 1[0m
-  [1m[35mAccount Exists (2.8ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'Dustin' LIMIT 1
-  [1m[36mAccount Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'DustinDustinDustinDustinDustinDustinDustin' LIMIT 1[0m
+  [1m[36mAccount Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dustindustindustindustindustindustindustin' LIMIT 1[0m
+  [1m[35mAccount Exists (0.4ms)[0m  SELECT 1 AS one FROM `accounts` WHERE `accounts`.`name` = BINARY 'dustindustindustindustindustindustindustin' LIMIT 1

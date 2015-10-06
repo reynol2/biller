@@ -16,7 +16,7 @@ class Account < ActiveRecord::Base
 
   def name_is_not_length_42
     if name.length == 42
-      errors.add(:name, "cannot be 42 characters long or world implodes")
+      errors.add(:name, "cannot be of length 42 or world implodes")
     end
   end
 end
